@@ -10,7 +10,7 @@ This project was designed to handle **real-world, messy marksheets** in differen
 
 - 📂 **Multi-format input** → JPG, PNG, PDF (up to 10MB)
 - 🔍 **Smart OCR** → Tesseract with OpenCV preprocessing + fallback OCR.space API
-- 🤖 **AI-powered parsing** → Gemini LLM structures unstructured OCR text into clean JSON
+- 🤖 **AI-powered parsing** → Gemini LLM structures unstructured OCR text into clean JSON or HuggingFace(zephyr-7b-beta) if Gemini Fails
 - 📊 **Confidence scores** → Every field includes a reliability score (0–1)
 - 🖼️ **Bounding boxes** → Optional word-level bounding boxes for highlighting text regions
 - 🎨 **Demo UI** → Upload a marksheet and view results in a neat, color-coded table
@@ -157,22 +157,5 @@ Service will be available at:
 
 ---
 
-## 💡 Why This Project Stands Out
-
-- Works across **different boards/universities** (not regex-locked)
-- Gives **field-level confidence** (requirement) + **document confidence** (bonus)
-- Has a **demo frontend** → makes testing easy
-- 100% **free & open-source stack** (only Gemini requires an API key)
-
----
-
-## 📝 Next Steps (Future Work)
-
-- Add **batch processing** (multiple files at once)
-- API key authentication for secure access
-- Export results to CSV/Excel
-- Deploy to free hosting platforms (Railway, Render, Hugging Face Spaces)
-
----
 
 👨‍💻 Built for robustness, clarity, and generalizability — this API is ready to handle unseen marksheet formats while staying simple to run and test.
