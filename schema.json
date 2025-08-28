@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Marksheet Extraction Response",
+  "type": "object",
+  "required": ["candidate", "subjects", "overall", "issue_details"],
+  "properties": {
+    "candidate": {
+      "type": "object",
+      "required": ["name", "father_name", "mother_name", "roll_no", "registration_no", "dob", "exam_year", "board_university", "institution"],
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/FieldValue"
+        },
+        "father_name": {
+          "$ref": "#/definitions/FieldValue"
+        },
+        "mother_name": {
+          "$ref": "#/definitions/FieldValue"
+        },
+        "roll_no": {
+          "$ref": "#/definitions/FieldValue"
+        },
+        "registration_no": {
+          "$ref": "#/definitions/FieldValue"
+        },
+        "dob": {
+          "$ref": "#/definitions/FieldValue"
+        },
+        "exam_year": {
+          "$ref": "#/definitions/FieldValue"
+        },
+        "board_university": {
+          "$ref": "#/definitions/FieldValue"
+        },
+        "institution": {
+          "$ref": "#/definitions/FieldValue"
+        }
+      }
+    },
+    "subjects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["subject", "max_marks", "obtained_marks", "grade"],
+        "properties": {
+          "subject": {
+            "$ref": "#/definitions/FieldValue"
+          },
+          "max_marks": {
+            "$ref": "#/definitions/FieldValue"
+          },
+          "obtained_marks": {
+            "$ref": "#/definitions/FieldValue"
+          },
+          "grade": {
+            "$ref": "#/definitions/FieldValue"
+          }
+        }
+      }
+    },
+    "overall": {
+      "type": "object",
+      "required": ["result", "division", "grade"],
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/FieldValue"
+        },
+        "division": {
+          "$ref": "#/definitions/FieldValue"
+        },
+        "grade": {
+          "$ref": "#/definitions/FieldValue"
+        }
+      }
+    },
+    "issue_details": {
+      "type": "object",
+      "required": ["issue_date", "issue_place"],
+      "properties": {
+        "issue_date": {
+          "$ref": "#/definitions/FieldValue"
+        },
+        "issue_place": {
+          "$ref": "#/definitions/FieldValue"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "FieldValue": {
+      "type": "object",
+      "required": ["value", "confidence"],
+      "properties": {
+        "value": {
+          "description": "The extracted field value"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Confidence score for the extracted value (0.0 to 1.0)"
+        }
+      }
+    }
+  }
+}
