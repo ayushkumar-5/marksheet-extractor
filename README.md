@@ -140,6 +140,18 @@ Service will be available at:
 
 ---
 
+## Innovation / Extra Features
+
+1. **Lightweight Sprint Board** – Built with Next.js 15 + App Router ensuring fast rendering.
+
+2. **Animated UI** – Used Framer Motion for smooth drag & drop and transitions.
+
+3. **Mock Auth & Guard** – Token-based login system (localStorage) with protected routes.
+
+4. **Dynamic Task Management** – Tasks fetched from a mock API with state sync.
+
+5. **Responsive & Modern Design** – Styled with Tailwind CSS for a clean experience.
+
 ## 🛡️ Error Handling
 
 - ❌ **Invalid file** → returns 400
