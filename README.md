@@ -2,7 +2,7 @@
 
 An AI-powered service built with **FastAPI** that extracts structured data from academic marksheets (images or PDFs). It uses **OCR + LLM** to pull out candidate info, subjects, marks, and results — with **confidence scores** for each field.
 
-👉 **Live Demo**: [marksheet-extractor-production.up.railway.app/demo](https://marksheet-extractor-production.up.railway.app/demo)
+👉 **Live Demo**: [Click here](https://marksheet-extractor-production.up.railway.app/demo)
 
 
 This project was designed to handle **real-world, messy marksheets** in different formats and make the data machine-readable.
